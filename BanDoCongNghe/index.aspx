@@ -23,22 +23,20 @@
         <div></div>
     </div>
     <div id="product-container">
-
-        <%  List<Models.Product.Product> products = App_Codez.Services.ProductService.gI().GetProducts();
-            for (int i = 0; i < products.Count() ; i++)
-            { %>
+        <asp:Repeater ID="rpProducts" runat="server">
+            <ItemTemplate>
                 <div class="item">
-                    <image src="./imgs/Products/<%=products[i].id %>.png" class="item-img"></image>
-                    <p class="item-title"><%=products[i].name %></p>
-                    <p class="item-price"><%=products[1].price %> đ</p>
+                    <image src="./imgs/Products/<%# Eval("id") %>.png" class="item-img"></image>
+                    <p class="item-title"><%# Eval("name") %></p>
+                    <p class="item-price"><%#Eval("price")%>đ</p>
                     <div class="btnProducts">
-                        <button class="btnCart">Thêm vào giỏ</button>
-                        <button class="btnBuy">Mua ngay</button>
+                        <asp:Button class="btnCart" UseSubmitBehavior="false"  Text="Thêm vào giỏ" runat="server" onClick="btnAddItemToCart_Click" CommandArgument="1"/>
+                        <button type="submit" class="btnBuy">Mua ngay</button>
                     </div>
                 </div>
-
-        <%} %>
-        <div class="item">
+            </ItemTemplate>
+        </asp:Repeater>
+        <div  class="item">
             <image src="./imgs/Products/0.png" class="item-img"></image>
             <p class="item-title">Galaxy Vip Pro</p>
             <p class="item-price">100.000.000đ</p>
@@ -48,7 +46,6 @@
             </div>
         </div>
     </div>
-
     <script src="./Scripts/index.js"></script>
     <script>
         var slides = document.getElementsByClassName("imgSlide");
@@ -88,7 +85,7 @@
             idSlide = nextSlide;
         }
         autoShowSlide(1);
-
+        
         
     </script>
 </asp:Content>

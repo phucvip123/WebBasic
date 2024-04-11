@@ -64,7 +64,7 @@
                         <p>Giỏ hàng</p>
                 
                     </a>
-                    <span id ="items-in-cart">0</span>
+                    <span id ="items-in-cart"><%=Session["User"] == null ? 0 : ((Models.User.User)Session["User"]).giohang.Count %></span>
                 </div>
                 <%if (Session["User"] == null)
                     {%>
@@ -128,7 +128,9 @@
             <p>Hello</p>
         </div>
          <div id="content">
+             
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
             </asp:ContentPlaceHolder>
         </div>
         <div id="zalo">

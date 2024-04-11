@@ -33,7 +33,7 @@ namespace BanDoCongNghe
                     }
                     else
                     {
-                        contentErr.InnerText = "Tài khoản hoặc mật khẩu không chính xác!";
+                        contentErr.InnerText = "Phiên đăng nhập đã hết hạn!";
                         errContainer.Style["display"] = "flex";
                     }
                 }

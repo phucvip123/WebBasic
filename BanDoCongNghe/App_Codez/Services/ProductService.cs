@@ -45,6 +45,23 @@ namespace App_Codez.Services
         public List<Product> GetProducts() {
             return ((List<Product>)HttpContext.Current.Application["Products"]);
         }
-
+        public Product GetProduct(int id)
+        {
+            foreach(Product p in ((List<Product>)HttpContext.Current.Application["Products"]))
+            {
+                if(p.id == id) return p;
+            }
+            return null;
+        }
+        public void SubQuantityItem(int id,int quantity)
+        {
+            foreach (Product p in ((List<Product>)HttpContext.Current.Application["Products"]))
+            {
+                if (p.id == id)
+                {
+                    p.soLuong-= quantity;
+                }
+            }
+        }
     }
 }
