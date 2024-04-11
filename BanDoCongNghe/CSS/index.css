@@ -1,0 +1,152 @@
+﻿#slideShow {
+    width: 90%;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px #d3d1d1;
+}
+
+#mySlides {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.imgSlide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 0;
+}
+
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    color: black;
+    top: 45%;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+}
+
+#next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+}
+
+    #prev:hover,
+    #next:hover {
+        background-color: #ddd6d6;
+    }
+
+#rowSlide {
+    width: 100%;
+    height: 25%;
+}
+
+.columnSlide {
+    float: left;
+    width: 16.66%;
+    height: 100%;
+}
+
+@keyframes slideInLeft {
+    100% {
+        left: 0;
+    }
+}
+
+.slideInLeft {
+    left: 100%;
+    animation: slideInLeft 1s forwards;
+}
+
+@keyframes slideOutLeft {
+    100% {
+        left: -100%;
+    }
+}
+
+.slideOutLeft {
+    left: 0;
+    animation: slideOutLeft 1s forwards;
+}
+
+@keyframes slideInRight {
+    100% {
+        left: 0;
+    }
+}
+
+.slideInRight {
+    left: -100%;
+    animation: slideInLeft 1s forwards;
+}
+
+@keyframes slideOutRight {
+    100% {
+        left: 100%;
+    }
+}
+
+.slideOutRight {
+    left: 0;
+    animation: slideOutRight 1s forwards;
+}
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 230px));
+    gap: 20px;
+    justify-content: center;
+}
+.item {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px #d3d1d1;
+    padding:10px;
+    position:relative;
+    text-align:left;
+}
+.item-img{
+    width:100%;
+    cursor:pointer;
+}
+.item-title{
+    font-weight:bold;
+    font-size:21px;
+    margin-bottom:3px;
+}
+.item-price{
+    font-weight:bold;
+    font-size:19px;
+    color:red;
+    margin-bottom:5px;
+}
+.btnProducts{
+    text-align:center;
+}
+.btnCart{
+    margin-right:5px;
+    padding:7px;
+    border:1px solid red;
+    background-color:transparent;
+    border-radius:5px;
+    font-weight:bold;
+    font-size:15px;
+    color:red;
+    cursor:pointer;
+}
+.btnBuy {
+    padding: 7px;
+    border: none;
+    background-color: red;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    cursor:pointer;
+}

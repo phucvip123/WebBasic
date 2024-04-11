@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeaderFooter.master.cs" Inherits="BanDoCongNghe.HeaderFooter" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>CellVip</title>
+<link rel ="stylesheet" href="./CSS/headerFooter.css" type="text/css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <form runat="server">
+        <header id ="header">
+            <nav id ="head-nav">
+                <a href ="" class ="logo">CellVip</a>
+                <div id ="danhmuc-container" class ="is-flex">
+                    <button id ="btnDanhMuc"class ="is-flex">
+                        <svg width="25px" height="25px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                          <title>category-list-solid</title>
+                          <g id="Layer_2" data-name="Layer 2">
+                            <g id="invisible_box" data-name="invisible box">
+                              <rect width="48" height="48" fill="none"/>
+                            </g>
+                            <g id="icons_Q2" data-name="icons Q2">
+                              <path fill="white" d="M24,10h0a2,2,0,0,1,2-2H42a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2H26A2,2,0,0,1,24,10Z"/>
+                              <path fill="white" d="M24,24h0a2,2,0,0,1,2-2H42a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2H26A2,2,0,0,1,24,24Z"/>
+                              <path fill="white" d="M24,38h0a2,2,0,0,1,2-2H42a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2H26A2,2,0,0,1,24,38Z"/>
+                              <path fill="white" d="M12,2a2.1,2.1,0,0,0-1.7,1L4.2,13a2.3,2.3,0,0,0,0,2,1.9,1.9,0,0,0,1.7,1H18a2.1,2.1,0,0,0,1.7-1,1.8,1.8,0,0,0,0-2l-6-10A1.9,1.9,0,0,0,12,2Z"/>
+                              <path fill="white" d="M12,30a6,6,0,1,1,6-6A6,6,0,0,1,12,30Z"/>
+                              <path fill="white" d="M16,44H8a2,2,0,0,1-2-2V34a2,2,0,0,1,2-2h8a2,2,0,0,1,2,2v8A2,2,0,0,1,16,44Z"/>
+                            </g>
+                          </g>
+                        </svg>
+                        <p>Danh mục</p>
+                    </button>
+                </div>
+                <div id ="nav-search">
+                    <form>
+                        <div class ="is-flex relative">
+                            <button id ="btnSearch" type ="submit">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <input id="txtSearch" type="text" placeholder="Bạn cần tìm gì?"/>
+                            <span id ="btn-close-search">x</span>
+                        </div>
+                    </form>
+                </div>
+                <div id ="hotline-container" class ="is-flex">
+                    <a href ="tel:19002097" class ="is-flex-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><g id="_01_align_center" data-name="01 align center"><path fill ="white" d="M21,12.424V11A9,9,0,0,0,3,11v1.424A5,5,0,0,0,5,22H7V12H5V11a7,7,0,0,1,14,0v1H17v8H13v2h6a5,5,0,0,0,2-9.576ZM5,20a3,3,0,0,1,0-6Zm14,0V14a3,3,0,0,1,0,6Z"/></g></svg>
+                        <p>Gọi mua hàng<br />1900.2097</p>
+                    </a>
+                </div>
+                <div id="cart-container">
+                    <a href ="https://zalo.me/0377946978" class ="is-flex-wrap">
+                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.86376 16.4552C3.00581 13.0234 2.57684 11.3075 3.47767 10.1538C4.3785 9 6.14721 9 9.68462 9H14.3153C17.8527 9 19.6214 9 20.5222 10.1538C21.4231 11.3075 20.9941 13.0234 20.1362 16.4552C19.5905 18.6379 19.3176 19.7292 18.5039 20.3646C17.6901 21 16.5652 21 14.3153 21H9.68462C7.43476 21 6.30983 21 5.49605 20.3646C4.68227 19.7292 4.40943 18.6379 3.86376 16.4552Z" stroke="white" stroke-width="1.5" fill-opacity="0"/>
+                        <path opacity="0.5" d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4" stroke="white" stroke-width="1.5" fill-opacity="0"/>
+                        <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z" stroke="white" stroke-width="1.5" fill-opacity="0"/>
+                        </svg>
+                        <p>Giỏ hàng</p>
+                
+                    </a>
+                    <span id ="items-in-cart">0</span>
+                </div>
+                <%if (Session["User"] == null)
+                    {%>
+                    <div id="login-container">
+                        <a class ="is-flex-wrap">
+                            <svg width="30px" height="30px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <desc/>
+                           <g>
+                           <circle cx="16" cy="16" fill="none" r="15" stroke="white" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                           <path d="M26,27L26,27   c0-5.523-4.477-10-10-10h0c-5.523,0-10,4.477-10,10v0" fill="none" stroke="white" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" fill-opacity="0" />
+                           <circle cx="16" cy="11" fill="none" r="6" stroke="white" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                           </g>
+
+                           </svg>
+                           <p>Đăng nhập</p>
+                        </a>
+                    </div>
+               <% }
+                   else
+                   { %> 
+                <div id="login-container"></div>
+                 <div id="user-container">
+                    <a class ="is-flex-wrap">
+                         <svg width="30px" height="30px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc/>
+                        <g>
+                        <circle cx="16" cy="16" fill="none" r="15" stroke="white" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                        <path d="M26,27L26,27   c0-5.523-4.477-10-10-10h0c-5.523,0-10,4.477-10,10v0" fill="none" stroke="white" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" fill-opacity="0" />
+                        <circle cx="16" cy="11" fill="none" r="6" stroke="white" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                        </g>
+                        </svg>
+                        <p><%=((Models.User.User)Session["User"]).name %></p>
+                     </a>
+                    <ul  id="nav-user">
+                        <li><a href="">Thông tin cá nhân</a></li>
+                        <li><a id="logOut" runat="server">Đăng xuất</a></li>
+                    </ul>
+            
+                 </div>
+
+              <%} %>
+   
+            </nav>
+            <div id="background-popup" class ="hide">
+                <div id="popup" >
+                    <p id ="popup-title">Cell Member</p>
+                    <button id ="btnClosePopup" class="btnClosePopup">
+                    </button>
+                    <image src ="./imgs/icons/linhthu.png"/>
+                    <p id="des-popup">Vui lòng đăng nhập tài khoản Cell Member để <br /> xem thêm nhiều ưu đãi hơn</p>
+                    <div id ="btns" class ="is-flex">
+                        <asp:Button ID="btnRegis" UseSubmitBehavior="false" runat="server" Text="Đăng Ký" OnClick="btnRegis_Click"/>
+                        <asp:Button ID="btnLogin" UseSubmitBehavior="false"  runat="server" Text="Đăng nhập" OnClick="btnLogin_Click"/>
+                    </div>
+                
+            
+                </div>
+            </div>
+        </header>
+        <div id="navigation">
+            <p>Hello</p>
+        </div>
+         <div id="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="zalo">
+            <image src="./imgs/icons/icon-zalo.png"></image>
+        </div>
+        <footer>
+            <h1>Đây là footer</h1>
+        </footer>
+    </form>
+    
+    <script src ="./Scripts/headerFooter.js"></script>
+</body>
+</html>

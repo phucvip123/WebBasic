@@ -1,0 +1,376 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#MainContent_contentRegis {
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.titleRegis {
+    text-align: center;
+    color: #4a4a4a;
+}
+
+#btnLog {
+    cursor: pointer;
+}
+
+.form-container {
+    margin-top: 20px;
+    position: relative;
+}
+
+.des {
+    color: #737373;
+    font-style: italic;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.inputText {
+    display: block;
+    border: none;
+    width: 100%;
+    height: 15px;
+    border-bottom: 1px solid rgba(145, 158, 171, .2);
+    font-size: 15px;
+    height: 100%;
+    padding: 18px 20px 2px 0px;
+    margin-left: 10px;
+    height: 50px;
+}
+
+.labelInput {
+    margin-left: 10px;
+    position: absolute;
+    top: 15px;
+    color: #919eab;
+    font-size: 15px;
+    pointer-events: none;
+    transition: top 0.25s ease;
+    opacity: 0;
+}
+
+.inputLine {
+    background-color: red;
+    width: 0%;
+    margin-left: 10px;
+    height: 1px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    transition: width 0.5s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#name:focus ~ #lbName {
+    top: 0px;
+    color: red;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#name:focus ~ #lineName {
+    width: 100%;
+}
+
+#name:valid ~ #lbName {
+    top: 0px;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#numberPhone:focus ~ #lbPhone {
+    top: 0px;
+    color: red;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#numberPhone:focus ~ #linePhone {
+    width: 100%;
+}
+
+#numberPhone:valid ~ #lbPhone {
+    top: 0px;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#email:focus ~ #lbEmail {
+    top: 0px;
+    color: red;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#email:focus ~ #lineEmail {
+    width: 100%;
+}
+
+#email:valid ~ #lbEmail {
+    top: 0px;
+    opacity: 1;
+    font-size: 12px;
+}
+
+
+#username:focus ~ #lbUsername {
+    top: 0px;
+    color: red;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#username:focus ~ #lineUsername {
+    width: 100%;
+}
+
+#username:valid ~ #lbUsername {
+    top: 0px;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#password:focus ~ #lbPassword {
+    top: 0px;
+    color: red;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#password:focus ~ #linePassword {
+    width: 100%;
+}
+
+#password:valid ~ #lbPassword {
+    top: 0px;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#repass:focus ~ #lbRepass {
+    top: 0px;
+    color: red;
+    opacity: 1;
+    font-size: 12px;
+}
+
+#repass:focus ~ #lineRepass {
+    width: 100%;
+}
+
+#repass:valid ~ #lbRepass {
+    top: 0px;
+    opacity: 1;
+    font-size: 12px;
+}
+
+.group-option {
+    margin-top: 20px;
+}
+
+.option {
+    margin-right: 5px;
+    accent-color: red;
+    margin-left: 10px;
+}
+
+#btnDangKy {
+    width: 100%;
+    background-color: #e0052b;
+    text-align: center;
+    height: 50px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+hr {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#haveAccount {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+    #haveAccount > p {
+        color: #777;
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    #haveAccount > a {
+        font-size: 16px;
+        font-weight: bold;
+        color: #d70018;
+        cursor: pointer;
+    }
+
+#MainContent_sucess {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification {
+    text-align: center;
+    animation: slideIn 0.5s ease forwards;
+}
+
+    .notification h2 {
+        color: #4CAF50;
+        margin-bottom: 10px;
+    }
+
+    .notification p {
+        color: #333;
+    }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#btnBack {
+    display: block;
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#MainContent_fail {
+    display: none;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+.notificationFail > * {
+    margin: 10px;
+}
+
+.notificationFail {
+    padding: 20px;
+    background-color: #f3564b;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#btnTry {
+    display: block;
+    background-color: red;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.invalid {
+    border-bottom: 1px solid red;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.valid {
+    border-bottom: 1px solid greenyellow;
+    color: greenyellow;
+}
+
+#MainContent_errContainer {
+    display: none;
+    margin-top: 30px;
+    background-color: #f5acac;
+    text-align: left;
+    width: 700px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    color: red;
+    padding: 10px;
+    position: relative;
+    height: fit-content;
+}
+
+#MainContent_contentErr {
+    white-space: pre-line;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+#errContainer > svg {
+    margin-right: 20px;
+}
