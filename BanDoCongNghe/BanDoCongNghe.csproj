@@ -70,6 +70,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\UPdate_INforrmatinon.css" />
+    <Content Include="CSS\UserInformation.css" />
     <Content Include="HeaderFooter.Master" />
     <Content Include="AddProduct.aspx" />
     <Content Include="CSS\HeaderFooter.css" />
@@ -86,6 +88,8 @@
     <Content Include="App_Data\Json\Users.json" />
     <Content Include="App_Data\Json\Products.json" />
     <Content Include="imgs\Products\0.png" />
+    <Content Include="UpDate_Information.aspx" />
+    <Content Include="UserInformation.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup />
@@ -132,6 +136,20 @@
     </Compile>
     <Compile Include="Registry.aspx.designer.cs">
       <DependentUpon>Registry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpDate_Information.aspx.cs">
+      <DependentUpon>UpDate_Information.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpDate_Information.aspx.designer.cs">
+      <DependentUpon>UpDate_Information.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInformation.aspx.cs">
+      <DependentUpon>UserInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInformation.aspx.designer.cs">
+      <DependentUpon>UserInformation.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

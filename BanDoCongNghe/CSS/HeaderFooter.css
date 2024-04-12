@@ -331,10 +331,9 @@ a {
 
 #user-container:hover {
     #nav-user
-
-{
-    display: flex;
-}
+    {
+        display: flex;
+    }
 
 }
 
@@ -344,7 +343,6 @@ a {
     position: absolute;
     left: 0px;
     top: 100%;
-    margin-top: 5px;
     background-color: #f6a6a6;
     border: none;
     border-radius: 5px;
@@ -355,13 +353,13 @@ a {
     z-index: 1;
 }
 
-    #nav-user > li {
-        padding: 10px;
-        color: black;
-        display: inline-block;
-        border-bottom: 1px solid #8b7575;
-    }
+#nav-user > li {
+    padding: 10px;
+    color: black;
+    display: inline-block;
+    border-bottom: 1px solid #8b7575;
+}
 
-        #nav-user > li:hover {
-            background-color: #dd2440;
-        }
+#nav-user > li:hover {
+    background-color: #dd2440;
+}

@@ -19,8 +19,17 @@
             <a id="next" onclick="nextSlide(1)">&#10095;</a>
         </div>
     </div>
-    <div id="filter-container">
-        <div></div>
+    <div id="filter-container" class="is-flex">
+        <p>Chọn theo nhu cầu</p>
+        <div id="filter-option" class="is-flex">
+        <asp:DropDownList ID="ddlFilterHang" runat="server" class="ddl"></asp:DropDownList>
+        <p style="margin:auto 10px auto 20px">Giá: </p>
+        <input runat="server" id="minPrice"  type="number" placeholder="Tối thiểu" class="ifilter"/>
+        <p style="margin: auto 10px;"> → </p>
+         <input runat="server" id="maxPrice" type="number" placeholder="Tối đa" class="ifilter"/>
+        <button class="btnFilter" onclick="btnFilter_Click()" type="button">Lọc</button>
+        </div>
+        
     </div>
     <div id="product-container">
         <asp:Repeater ID="rpProducts" runat="server">
@@ -28,7 +37,7 @@
                 <div class="item">
                     <image src="./imgs/Products/<%# Eval("id") %>.png" class="item-img"></image>
                     <p class="item-title"><%# Eval("name") %></p>
-                    <p class="item-price"><%#Eval("price")%>đ</p>
+                    <p class="item-price"><%#Eval("priceFormat")%>đ</p>
                     <div class="btnProducts">
                         <asp:Button class="btnCart" UseSubmitBehavior="false"  Text="Thêm vào giỏ" runat="server" onClick="btnAddItemToCart_Click" CommandArgument="1"/>
                         <button type="submit" class="btnBuy">Mua ngay</button>
@@ -85,6 +94,16 @@
             idSlide = nextSlide;
         }
         autoShowSlide(1);
+        function btnFilter_Click() {
+            var hang = document.getElementsByClassName("ddl")[0].value;
+            var minPrice = document.getElementById("minPrice") == null ? -1 : document.getElementById("minPrice").value;
+            var maxPrice = document.getElementById("maxPrice") == null ? 2123456789 : document.getElementById("maxValue").value;
+            if (window.location.href.includes('search')) {
+                window.location.href += "&minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&hang=" + hang;
+            } else {
+                window.location.href = "index.aspx?minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&hang=" + hang;
+            }
+        }
         
         
     </script>

@@ -15,6 +15,33 @@ namespace BanDoCongNghe
     {
 
         /// <summary>
+        /// ddlFilterHang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlFilterHang;
+
+        /// <summary>
+        /// minPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl minPrice;
+
+        /// <summary>
+        /// maxPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl maxPrice;
+
+        /// <summary>
         /// rpProducts control.
         /// </summary>
         /// <remarks>

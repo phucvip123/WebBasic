@@ -13,7 +13,7 @@
     <form runat="server">
         <header id ="header">
             <nav id ="head-nav">
-                <a href ="" class ="logo">CellVip</a>
+                <a href ="index.aspx" class ="logo">CellVip</a>
                 <div id ="danhmuc-container" class ="is-flex">
                     <button id ="btnDanhMuc"class ="is-flex">
                         <svg width="25px" height="25px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@
                                     <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
-                            <input id="txtSearch" type="text" placeholder="Bạn cần tìm gì?"/>
+                            <input id="txtSearch" name="txtSearch" type="text" placeholder="Bạn cần tìm gì?"/>
                             <span id ="btn-close-search">x</span>
                         </div>
                     </form>
@@ -85,9 +85,9 @@
                <% }
                    else
                    { %> 
-                <div id="login-container"></div>
+                <div id="login-container" style="display:none;"></div>
                  <div id="user-container">
-                    <a class ="is-flex-wrap">
+                    <a class ="is-flex-wrap" href="UserInformation.aspx"> 
                          <svg width="30px" height="30px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <desc/>
                         <g>
@@ -99,7 +99,7 @@
                         <p><%=((Models.User.User)Session["User"]).name %></p>
                      </a>
                     <ul  id="nav-user">
-                        <li><a href="">Thông tin cá nhân</a></li>
+                        <li><a href="UserInformation.aspx">Thông tin cá nhân</a></li>
                         <li><a id="logOut" runat="server">Đăng xuất</a></li>
                     </ul>
             

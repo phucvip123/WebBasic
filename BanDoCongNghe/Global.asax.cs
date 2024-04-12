@@ -15,6 +15,7 @@ namespace BanDoCongNghe
             System.Web.Routing.RouteTable.Routes.MapPageRoute("Default", "", "~/index.aspx");
             Application["Users"] = UserService.gI().getUsers();
             Application["Products"] = ProductService.gI().getProducts();
+
         }
 
         protected void Session_Start(object sender, EventArgs e)

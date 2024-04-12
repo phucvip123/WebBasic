@@ -1,0 +1,43 @@
+﻿.content {
+    margin: 20px auto;
+    width: 350px;
+    border: 2px red solid;
+    border-radius: 10px;
+    height: 400px;
+}
+
+table {
+    width: 100%;
+    padding-left: 55px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: black;
+}
+
+input {
+    border: solid red 3px;
+    border-radius: 7px;
+    height: 30px;
+}
+
+.mkPass{
+    margin-left: 60px;
+    color: red;
+    font-size: 30px;
+}
+
+.button {
+    margin-top: 30px;
+    margin-left: 40px;
+    height: 40px;
+    background-color: red;
+    border: 90px red;
+    border-radius: 9px;
+    color: white;
+}

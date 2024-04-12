@@ -19,6 +19,7 @@
         public string mauSac { get; set; }
         public string description { get; set; }
         public int img { get; set; }
+        public string priceFormat { get; set; }
 
         public Product(int id, string name, string loai, int price, int soLuong, int ram, int rom, string hang, int namSX, string cpu, float sizeMH, int[] phanGiai, int pin, int doSang, string mauSac, string description, int img)
         {
@@ -39,6 +40,26 @@
             this.mauSac = mauSac;
             this.description = description;
             this.img = img;
+            this.priceFormat = format(price);
+        }
+        public string format(object x)
+        {
+            string ans = "";
+            int a = int.Parse(x.ToString());
+            while (a > 1000)
+            {
+                string temp = (a % 1000).ToString();
+                temp = temp + "";
+                while (temp.Length < 3)
+                {
+                    temp = "0" + temp;
+                }
+                temp = "." + temp;
+                ans = temp + ans;
+                a /= 1000;
+            }
+            if (a != 0) ans = a.ToString() + ans;
+            return ans;
         }
     }
 }

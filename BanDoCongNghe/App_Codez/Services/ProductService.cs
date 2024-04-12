@@ -29,6 +29,7 @@ namespace App_Codez.Services
             //Đọc user
             string jsonContent = File.ReadAllText(pathUserJson);
             products = JsonConvert.DeserializeObject<List<Product>>(jsonContent);
+            
             return products ?? new List<Product>();
         }
         public void saveProducts()
@@ -62,6 +63,18 @@ namespace App_Codez.Services
                     p.soLuong-= quantity;
                 }
             }
+        }
+        public List<string> GetHangs()
+        {
+            List<string> hangs = new List<string>();
+            foreach(Product p in GetProducts())
+            {
+                if (!hangs.Contains(p.hang))
+                {
+                    hangs.Add(p.hang);
+                }
+            }
+            return hangs;
         }
     }
 }
