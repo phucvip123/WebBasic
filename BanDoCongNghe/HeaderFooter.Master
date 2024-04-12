@@ -14,7 +14,7 @@
         <header id ="header">
             <nav id ="head-nav">
                 <a href ="index.aspx" class ="logo">CellVip</a>
-                <div id ="danhmuc-container" class ="is-flex">
+                <%--<div id ="danhmuc-container" class ="is-flex">
                     <button id ="btnDanhMuc"class ="is-flex">
                         <svg width="25px" height="25px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                           <title>category-list-solid</title>
@@ -34,7 +34,7 @@
                         </svg>
                         <p>Danh mục</p>
                     </button>
-                </div>
+                </div>--%>
                 <div id ="nav-search">
                     <form>
                         <div class ="is-flex relative">
