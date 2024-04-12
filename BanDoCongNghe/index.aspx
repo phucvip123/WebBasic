@@ -24,9 +24,9 @@
         <div id="filter-option" class="is-flex">
         <asp:DropDownList ID="ddlFilterHang" runat="server" class="ddl"></asp:DropDownList>
         <p style="margin:auto 10px auto 20px">Giá: </p>
-        <input runat="server" id="minPrice"  type="number" placeholder="Tối thiểu" class="ifilter"/>
+        <input runat="server"  id="minPrice"  type="number" placeholder="Tối thiểu" class="ifilter filterPrice"/>
         <p style="margin: auto 10px;"> → </p>
-         <input runat="server" id="maxPrice" type="number" placeholder="Tối đa" class="ifilter"/>
+         <input runat="server" id="maxPrice" type="number" placeholder="Tối đa" class="ifilter filterPrice"/>
         <button class="btnFilter" onclick="btnFilter_Click()" type="button">Lọc</button>
         </div>
         
@@ -96,13 +96,10 @@
         autoShowSlide(1);
         function btnFilter_Click() {
             var hang = document.getElementsByClassName("ddl")[0].value;
-            var minPrice = document.getElementById("minPrice") == null ? -1 : document.getElementById("minPrice").value;
-            var maxPrice = document.getElementById("maxPrice") == null ? 2123456789 : document.getElementById("maxValue").value;
-            if (window.location.href.includes('search')) {
-                window.location.href += "&minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&hang=" + hang;
-            } else {
-                window.location.href = "index.aspx?minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&hang=" + hang;
-            }
+            var minPrice = document.getElementsByClassName("filterPrice")[0] == null ? -1 : document.getElementsByClassName("filterPrice")[0].value;
+            var maxPrice = document.getElementsByClassName("filterPrice")[1] == null ? 2123456789 : document.getElementsByClassName("filterPrice")[1].value;
+            
+            window.location.href = "index.aspx?minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&hang=" + hang;
         }
         
         

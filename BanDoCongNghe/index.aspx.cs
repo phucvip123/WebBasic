@@ -15,14 +15,6 @@ namespace BanDoCongNghe
         public static List<Product> products = new List<Product>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Request.HttpMethod == "POST")
-            {
-                
-                if (Request.Form["txtSearch"] != null)
-                {
-                    int x = 1;
-                }
-            }
             ShowListProduct();
             rpProducts.DataSource =products;
             rpProducts.DataBind();
@@ -84,23 +76,12 @@ namespace BanDoCongNghe
             }
 
         }
-        public List<Product> FilterItem(string minP,string maxP,string h)
+        public List<Product> FilterItem(int min,int max,string h)
         {
             
             List<Product> list = products;
-            int min;
-            int max;
+           
             
-            if (minP == null || !int.TryParse(minP.ToString(), out min))
-            {
-                min = -1;
-            }
-
-            if (maxP == null || !int.TryParse(maxP.ToString(), out max))
-            {
-                max = int.MaxValue;
-
-            }
             string hang = h;
             for (int i = list.Count - 1; i >= 0; i--)
             {
@@ -115,9 +96,9 @@ namespace BanDoCongNghe
         public void ShowListProduct()
         {
             
-            products = ((List<Product>)Application["Products"]);
             if (Request.Form["txtSearch"] != null)
             {
+                products = new List<Product>((List<Product>)Application["Products"]);
                 string search = Request.Form["txtSearch"].ToString();
                 for(int i = products.Count-1;i >= 0; i--)
                 {
@@ -126,6 +107,9 @@ namespace BanDoCongNghe
                         products.RemoveAt(i);
                     }
                 }
+                ddlFilterHang.SelectedItem.Value = Request.Form["txtSearch"].ToString();
+                ddlFilterHang.SelectedItem.Text = Request.Form["txtSearch"].ToString();
+                return;
 
             }
             if (Request.QueryString["minPrice"] != null || Request.QueryString["maxPrice"] != null || (Request.QueryString["hang"] != null && Request.QueryString["hang"].ToString() != "All"))
@@ -140,13 +124,11 @@ namespace BanDoCongNghe
                 {
                     maxPrice.Value = max.ToString();
                 }
-                ddlFilterHang.SelectedItem.Value = Request.QueryString["hang"].ToString();
-                ddlFilterHang.SelectedItem.Text = Request.QueryString["hang"].ToString();
-                products = FilterItem(Request.QueryString["minPrice"], Request.QueryString["maxPrice"], Request.QueryString["hang"]);
+                products = new List<Product>(FilterItem(min, max, Request.QueryString["hang"]));
             }
             else
             {
-                products = ((List<Product>)Application["Products"]);
+                products = new List<Product>(ProductService.gI().GetProducts());
             }
         }
     }
