@@ -39,7 +39,7 @@
                     <p class="item-title"><%# Eval("name") %></p>
                     <p class="item-price"><%#Eval("priceFormat")%>đ</p>
                     <div class="btnProducts">
-                        <asp:Button class="btnCart" UseSubmitBehavior="false"  Text="Thêm vào giỏ" runat="server" onClick="btnAddItemToCart_Click" CommandArgument="1"/>
+                        <asp:Button class="btnCart" UseSubmitBehavior="false"  Text="Thêm vào giỏ" runat="server" onClick="btnAddItemToCart_Click" CommandArgument='<%# Eval("id") %>'/>
                         <button type="submit" class="btnBuy">Mua ngay</button>
                     </div>
                 </div>

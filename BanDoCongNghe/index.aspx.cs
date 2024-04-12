@@ -61,7 +61,11 @@ namespace BanDoCongNghe
                             break;
                         }
                     }
-                    if(flag) ((User)Session["User"]).giohang.Add(p);
+                    if (flag)
+                    {
+                        p.soLuong = 1;
+                        ((User)Session["User"]).giohang.Add(p);
+                    }    
                     UserService.gI().saveUsers();
                 }
                 else
