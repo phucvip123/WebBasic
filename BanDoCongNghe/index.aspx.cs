@@ -116,6 +116,7 @@ namespace BanDoCongNghe
                 return;
 
             }
+            products = new List<Product>((List<Product>)Application["Products"]);
             if (Request.QueryString["minPrice"] != null || Request.QueryString["maxPrice"] != null || (Request.QueryString["hang"] != null && Request.QueryString["hang"].ToString() != "All"))
             {
 
