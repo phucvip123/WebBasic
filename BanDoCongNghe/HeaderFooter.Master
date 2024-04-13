@@ -54,8 +54,13 @@
                         <p>Gọi mua hàng<br />1900.2097</p>
                     </a>
                 </div>
-                <div id="cart-container">
-                    <a href ="https://zalo.me/0377946978" class ="is-flex-wrap">
+                <script>
+                    function redirect(link) {
+                        window.location.href = link;
+                    }
+                </script>
+                <div id="cart-container" onclick="redirect('Cart.aspx')">
+                    <a href ="Cart.aspx" class ="is-flex-wrap">
                         <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.86376 16.4552C3.00581 13.0234 2.57684 11.3075 3.47767 10.1538C4.3785 9 6.14721 9 9.68462 9H14.3153C17.8527 9 19.6214 9 20.5222 10.1538C21.4231 11.3075 20.9941 13.0234 20.1362 16.4552C19.5905 18.6379 19.3176 19.7292 18.5039 20.3646C17.6901 21 16.5652 21 14.3153 21H9.68462C7.43476 21 6.30983 21 5.49605 20.3646C4.68227 19.7292 4.40943 18.6379 3.86376 16.4552Z" stroke="white" stroke-width="1.5" fill-opacity="0"/>
                         <path opacity="0.5" d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4" stroke="white" stroke-width="1.5" fill-opacity="0"/>
@@ -137,7 +142,49 @@
             <image src="./imgs/icons/icon-zalo.png"></image>
         </div>
         <footer>
-            <h1>Đây là footer</h1>
+            <div class="footer-section">
+                <h3 class="footer-heading">CÔNG TY TNHH 4 THÀNH VIÊN</h3>
+                <p>Tầng 6, Tòa nhà Cảng Sài Gòn, số 3, đường Nguyễn Tất Thành, Phường 13, Quận 4, Thành phố Hồ Chí Minh, Việt Nam</p>
+                <p>E. info@kerryexpressvn.com</p>
+                <p>W. kerryexpressvn.com</p>
+                <p>TĐKKD: 0101104372 do Cục Thuế Thành phố Hồ Chí Minh cấp ngày 10/02/2006</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">Thành viên chính trong công ty</h3>
+                <p>Nguyễn Văn Phúc</p>
+                <p>Phạm Thanh Tùng</p>
+                <p>Lê Duy Thuỷ</p>
+                <p>Vũ Thị Hương Giang</p>
+                <h3 class="footer-heading">Theo dõi chúng tôi trên</h3>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>Tiktok</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">Phương thức thanh toán</h3>
+                <img class="image" src="./imgs/footers/mm.png">
+                <img class="image" src="./imgs/footers/vtp.png">
+                <img class="image" src="./imgs/footers/vcb.png">
+                <img class="image" src="./imgs/footers/zlp.png">
+                <img class="image" src="./imgs/footers/vt.png">
+                <h3 class="footer-heading">Đơn vị vận chuyển</h3>
+                <img class="image" src="./imgs/footers/ghn.png">
+                <img class="image" src="./imgs/footers/ghn2.png">
+                <img class="image" src="./imgs/footers/fe.png">
+                <img class="image" src="./imgs/footers/jt.png">
+                <img class="image" src="./imgs/footers/vtpost.png">
+                <img class="image" src="./imgs/footers/dhl.png">
+                <img class="image" src="./imgs/footers/vnp.png">
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">Tổng đài hỗ trợ</h3>
+                <p class="footer-contact-info">Gọi mua hàng: <b>0123 456 789</b></p>
+                <p class="footer-contact-info">Gọi khiếu nại: <b>0123 456 789</b></p>
+                <p class="footer-contact-info">Gọi bảo hành: <b>0123 456 789</b></p>
+                <h3 class="footer-heading">Thời gian làm việc</h3>
+                <p class="footer-contact-info">Thứ 2-Thứ 7: 08:00-17:00 </p>
+                <p class="footer-contact-info">CN & Ngày lễ: Nghỉ </p>
+            </div>
         </footer>
     </form>
     

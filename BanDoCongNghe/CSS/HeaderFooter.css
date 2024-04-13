@@ -375,3 +375,39 @@ a {
 #nav-user > li:hover {
     background-color: #dd2440;
 }
+footer {
+    background-color: rgb(247, 247, 247);
+    color: #070707;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; 
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around; 
+    padding-bottom:50px;
+}
+
+
+.footer-section {
+    flex-basis: calc(25% - 10px); 
+    margin: 10px;
+    text-align: left; 
+}
+
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-contact-info {
+    margin-bottom: 10px;
+}
+
+.image {
+    width: 80px; 
+    height: auto; 
+    margin-right: 15px; 
+    text-align: left;
+}

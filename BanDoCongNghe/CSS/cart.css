@@ -1,0 +1,140 @@
+﻿.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trolai {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    border: black solid 1px;
+    border-radius: 10px;
+    width: 600px;
+    padding: 30px 0px;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.btncheckbox {
+    width: 30px;
+    height: 20px;
+    margin:auto;
+}
+
+.anh_gh {
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.content_tengia {
+    margin: 0px 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ten_gh {
+    margin: 0PX;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gia_gh {
+    margin: 0px;
+    color: red;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content_xoathem {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.them_gh {
+    display: flex;
+}
+
+.btnxoa {
+    width: 50px;
+}
+
+.btntru, .btncong {
+    width: 25px;
+    height: 22px;
+}
+
+.content_xoathem p {
+    margin: 0px 10px;
+}
+
+.id_gh {
+    display: none;
+}
+
+
+.tong_tien {
+    background-color: #fff;
+    position: fixed;
+    bottom: 10px;
+    border: black solid 1px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.tien {
+    margin-left: 50px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.thanh_tien {
+    font-size: 20px;
+    color: red;
+    font-weight:bold;
+}
+
+.mua {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 50px;
+    color: #fff;
+    border: none;
+    background-color: #d20d24;
+    border-radius: 10px;
+}
+
+.trolai {
+    width: 600px;
+    display: flex;
+}
+
+.trolai p {
+    margin: 0px;
+    padding: 10px 30px;
+    background-color: #d20d24;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.motrangchu {
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+}

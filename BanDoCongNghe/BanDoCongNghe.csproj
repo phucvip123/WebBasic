@@ -70,6 +70,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cart.aspx" />
+    <Content Include="CSS\cart.css" />
     <Content Include="CSS\UPdate_INforrmatinon.css" />
     <Content Include="CSS\UserInformation.css" />
     <Content Include="HeaderFooter.Master" />
@@ -81,6 +83,7 @@
     <Content Include="Global.asax" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="ProductDetails.aspx" />
     <Content Include="Registry.aspx" />
     <Content Include="Scripts\HeaderFooter.js" />
     <Content Include="Scripts\login.js" />
@@ -100,6 +103,13 @@
     </Compile>
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="HeaderFooter.Master.cs">
       <DependentUpon>HeaderFooter.Master</DependentUpon>
@@ -128,6 +138,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.aspx.cs">

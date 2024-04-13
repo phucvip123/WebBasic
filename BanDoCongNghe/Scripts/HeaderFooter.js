@@ -30,6 +30,7 @@ document.getElementById("txtSearch").addEventListener("keypress", function (even
         return false;
     }
 });
+
 function openGoogleMap() {
     var latitude = 40.7128; // Vĩ độ
     var longitude = -74.0060; //Kinh độ
