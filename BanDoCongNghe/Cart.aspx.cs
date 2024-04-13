@@ -1,4 +1,5 @@
-﻿using Models.Product;
+﻿using BanDoCongNghe.App_Code.Services;
+using Models.Product;
 using Models.User;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,7 @@ namespace BanDoCongNghe
 
                 }
             }
+            UserService.gI().saveUsers();
         }
 
         protected void Minus_Click(object sender, EventArgs e)

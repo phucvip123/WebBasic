@@ -1,4 +1,5 @@
-﻿using Models.User;
+﻿using Models.Product;
+using Models.User;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
@@ -49,9 +50,31 @@ namespace BanDoCongNghe.App_Code.Services
             {
                 pathUserJson = HttpContext.Current.Server.MapPath("~/App_Data/Json/Users.json");
             }
-            List<User> userList = ((List<User>)HttpContext.Current.Application["Users"]);
-            string jsonContent = JsonConvert.SerializeObject(userList);
-            File.WriteAllText(pathUserJson, jsonContent);
+            if(HttpContext.Current != null)
+            {
+                List<User> userList = ((List<User>)HttpContext.Current.Application["Users"]);
+                string jsonContent = JsonConvert.SerializeObject(userList);
+                File.WriteAllText(pathUserJson, jsonContent);
+            }
+            
+        }
+        public bool addItemToCart(User u,Product p)
+        {
+            bool flag = false;
+            if (u == null || p == null) return false;
+            foreach (Product x in u.giohang)
+            {
+                if(x.id ==  p.id)
+                {
+                    x.soLuong += p.soLuong;
+                    flag = true;
+                }
+            }
+            if (!flag)
+            {
+                u.giohang.Add(p);
+            }
+            return true;
         }
     }
 }

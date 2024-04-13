@@ -32,9 +32,14 @@
         
     </div>
     <div id="product-container">
+        <script>
+            function redirect(link) {
+                window.location.href = link;
+            }
+        </script>
         <asp:Repeater ID="rpProducts" runat="server">
             <ItemTemplate>
-                <div class="item">
+                <div class="item" onclick="redirect('ProductDetails.aspx?id=<%# Eval("id") %>')" >
                     <image src="./imgs/Products/<%# Eval("id") %>.png" class="item-img"></image>
                     <p class="item-title"><%# Eval("name") %></p>
                     <p class="item-price"><%#Eval("priceFormat")%>đ</p>
@@ -45,17 +50,10 @@
                 </div>
             </ItemTemplate>
         </asp:Repeater>
-        <div  class="item">
-            <image src="./imgs/Products/0.png" class="item-img"></image>
-            <p class="item-title">Galaxy Vip Pro</p>
-            <p class="item-price">100.000.000đ</p>
-            <div class="btnProducts">
-                <button class="btnCart">Thêm vào giỏ</button>
-                <button class="btnBuy">Mua ngay</button>
-            </div>
-        </div>
     </div>
-    <script src="./Scripts/index.js"></script>
+    <a href="#" id="back-to-top">
+        <img src="./imgs/icons/backtotop.png" alt="Back to Top">
+    </a>
     <script>
         var slides = document.getElementsByClassName("imgSlide");
         var idSlide = 0;
@@ -101,7 +99,22 @@
             
             window.location.href = "index.aspx?minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&hang=" + hang;
         }
-        
+        document.addEventListener('DOMContentLoaded', function () {
+            var backToTopButton = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 0 || document.documentElement.scrollTop > 0) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+
+            backToTopButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
         
     </script>
 </asp:Content>

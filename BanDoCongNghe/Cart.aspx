@@ -21,7 +21,7 @@
                             <p class='gia_gh'><%#Eval("priceFormat") %> đ</p>
                         </div>
                         <div class='content_xoathem' >
-                        <asp:Button Text="Xóa" runat="server" class="btnxoa" CommandName="xoa" CommandArgument='<%#Eval("id")%>' OnClick="Delete_Click" />
+                        <asp:Button UseSubmitBehavior="false" Text="Xóa" runat="server" class="btnxoa" CommandName="xoa" CommandArgument='<%#Eval("id")%>' OnClick="Delete_Click" />
                             <div class='them_gh'>
                                 <asp:Button UseSubmitBehavior="false" class="btntru" runat="server" Text="-" CommandName="tru" CommandArgument='<%#Eval("id")%>' OnClick="Minus_Click"/>
                                 <p class='sl'><%# Eval("soLuong") %></p>
