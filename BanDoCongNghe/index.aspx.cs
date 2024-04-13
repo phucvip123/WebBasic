@@ -124,8 +124,18 @@ namespace BanDoCongNghe
                 {
                     minPrice.Value = min.ToString();
                 }
+                else
+                {
+                    min = -1;
+                    minPrice.Value = min.ToString();
+                }
                 if (int.TryParse(Request.QueryString["maxPrice"].ToString(), out max) && max != 2123456789)
                 {
+                    maxPrice.Value = max.ToString();
+                }
+                else
+                {
+                    max = 2123456789;
                     maxPrice.Value = max.ToString();
                 }
                 products = new List<Product>(FilterItem(min, max, Request.QueryString["hang"]));
