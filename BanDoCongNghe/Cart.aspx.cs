@@ -59,7 +59,10 @@ namespace BanDoCongNghe
             }
             UserService.gI().saveUsers();
         }
+        protected void Buy_Click(object o,EventArgs e)
+        {
 
+        }
         protected void Minus_Click(object sender, EventArgs e)
         {
 

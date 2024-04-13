@@ -20,7 +20,7 @@ namespace BanDoCongNghe
 
                 User user = (User)Session["User"];
 
-                ID.Text = "#" + user.id.ToString();
+                //ID.Text = "#" + user.id.ToString();
                 password.Text = user.password.ToString();
                 nameLogin.Text = user.username.ToString();
                 name.Text = user.name.ToString();

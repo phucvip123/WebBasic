@@ -6,27 +6,18 @@
         <link rel ="stylesheet" href="./CSS/UserInformation.css"/>
         <div class="main">
             <div class="header_page">
-                <div class="left">
-                    <table>
-                        <tr>
-                            <td><img src="./image/btl.png" alt="" /></td>
-                        </tr>
-                        <tr>    
-                            <td>
-                                <asp:Label ID="ID" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Label ID="nameLogin" runat="server" Text=""></asp:Label>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                <p style="font-weight:bold;margin: 5px auto;font-size:18px;">Thông tin cá nhân</p>
             </div>
 
             <div class="content">
                 <table>
+                    <tr>
+                        <td>
+                            <p >Username : </p>
+                            <asp:Label ID="nameLogin" runat="server" Text=""></asp:Label>
+                            <hr>
+                        </td>                
+                    </tr>
                     <tr>
                         <td>
                             <p >Họ và tên : </p>
@@ -65,8 +56,8 @@
                 </table>
             </div>  
             <div class="btn">
-                <a href="UpDate_Information.aspx">Đổi mật khẩu</a>
-               <a id="logOut" runat="server" onclick="logOut_Click">Đăng xuất</a>
+                <a href="UpDate_Information.aspx" style="font-weight:bold;">Đổi mật khẩu</a>
+               <a id="logOut" runat="server" onclick="logOut_Click" style="font-weight:bold;">Đăng xuất</a>
             </div>
         </div>
     </asp:Content>

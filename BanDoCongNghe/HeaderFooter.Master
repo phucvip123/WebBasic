@@ -91,7 +91,7 @@
                    else
                    { %> 
                 <div id="login-container" style="display:none;"></div>
-                 <div id="user-container">
+                 <div onclick="redirect('UserInformation.aspx')" id="user-container">
                     <a class ="is-flex-wrap" href="UserInformation.aspx"> 
                          <svg width="30px" height="30px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <desc/>

@@ -11,7 +11,7 @@
         %>
          <image src="./imgs/SlideShow/<%=Path.GetFileName(f)%>" alt="<%=Path.GetFileName(f) %>" class="imgSlide"></image>
         <%
-        } %>
+        }%>
         </div>
 
         <div id="sliderNav">
@@ -39,13 +39,13 @@
         </script>
         <asp:Repeater ID="rpProducts" runat="server">
             <ItemTemplate>
-                <div class="item" onclick="redirect('ProductDetails.aspx?id=<%# Eval("id") %>')" >
-                    <image src="./imgs/Products/<%# Eval("id") %>.png" class="item-img"></image>
+                <div class="item"  >
+                    <image onclick="redirect('ProductDetails.aspx?id=<%# Eval("id") %>')" src="./imgs/Products/<%# Eval("id") %>.png" class="item-img"></image>
                     <p class="item-title"><%# Eval("name") %></p>
                     <p class="item-price"><%#Eval("priceFormat")%>đ</p>
                     <div class="btnProducts">
                         <asp:Button class="btnCart" UseSubmitBehavior="false"  Text="Thêm vào giỏ" runat="server" onClick="btnAddItemToCart_Click" CommandArgument='<%# Eval("id") %>'/>
-                        <button type="submit" class="btnBuy">Mua ngay</button>
+                        <button type="button" onclick="btnBuy()" class="btnBuy">Mua ngay</button>
                     </div>
                 </div>
             </ItemTemplate>
@@ -55,6 +55,16 @@
         <img src="./imgs/icons/backtotop.png" alt="Back to Top">
     </a>
     <script>
+        function btnBuy() {
+        <%if (Session["User"] == null)
+        { %>
+            window.location.href = "Login.aspx";
+             <%}
+        else
+        { %>
+             window.location.href = "Success.aspx?"
+             <% }%>
+        }
         var slides = document.getElementsByClassName("imgSlide");
         var idSlide = 0;
         function autoShowSlide() {

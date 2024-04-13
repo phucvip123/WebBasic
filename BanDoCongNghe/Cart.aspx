@@ -36,6 +36,7 @@
                     <p class="tamtinh">Tạm tính</p>
                     <p id="thanh_tien" class="thanh_tien">0</p>
                 </div>
+                <asp:Button UseSubmitBehavior="false"  class="mua" runat="server" Text="Mua ngay"  OnClick="Buy_Click"/>
                 <button class="mua"><b>Mua ngay</b></button>
             </div>
         </div>

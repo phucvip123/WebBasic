@@ -91,6 +91,7 @@
     <Content Include="App_Data\Json\Users.json" />
     <Content Include="App_Data\Json\Products.json" />
     <Content Include="imgs\Products\0.png" />
+    <Content Include="Success.aspx" />
     <Content Include="UpDate_Information.aspx" />
     <Content Include="UserInformation.aspx" />
     <Content Include="Web.config" />
@@ -153,6 +154,13 @@
     </Compile>
     <Compile Include="Registry.aspx.designer.cs">
       <DependentUpon>Registry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpDate_Information.aspx.cs">
       <DependentUpon>UpDate_Information.aspx</DependentUpon>

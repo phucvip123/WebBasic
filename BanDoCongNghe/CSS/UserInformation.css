@@ -6,9 +6,10 @@
 .main {
     width: 70%;
     max-width: 500px;
-    margin: 10px auto 0 auto;
-    border: 3px solid red;
-    border-radius: 4px;
+    margin: 20px auto;
+    padding:10px;
+    border: 1px solid red;
+    border-radius: 10px;
 }
 
 .header_page {
@@ -16,9 +17,9 @@
     text-align: center;
 }
 
-    .header_page .left {
-        margin-bottom: 20px;
-    }
+.header_page .left {
+    margin-bottom: 20px;
+}
 
 table {
     margin: 0 auto;
@@ -54,9 +55,9 @@ td > p {
     justify-content: space-between;
 }
 
-    .btn a {
-        display: inline-block;
-        padding: 16px;
-        background-color: red;
-        border-radius: 4px;
-    }
+.btn a {
+    display: inline-block;
+    padding: 16px;
+    background-color: #e02121;
+    border-radius: 4px;
+}
