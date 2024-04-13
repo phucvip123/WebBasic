@@ -15,7 +15,10 @@ namespace BanDoCongNghe
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Không cần thêm logic xử lý trong sự kiện Page_Load
+            if (Session["User"] == null)
+            {
+                Response.Redirect("index.aspx");
+            }
         }
 
         protected void btn_confirm_Click(object sender, EventArgs e)

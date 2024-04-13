@@ -59,7 +59,12 @@
                 <a href="UpDate_Information.aspx" style="font-weight:bold;">Đổi mật khẩu</a>
                <a id="logOut" runat="server" onclick="logOut_Click" style="font-weight:bold;">Đăng xuất</a>
             </div>
+            
         </div>
+        <div class="is-flex" style="justify-content:center;align-items:center;">
+            <a href="index.aspx" style="color:red;text-align:center;margin:10px auto;font-size:20px;">Về trang chủ</a>
+        </div>
+        
     </asp:Content>
 
 

@@ -12,9 +12,28 @@ namespace BanDoCongNghe
 {
     public partial class Cart : System.Web.UI.Page
     {
+        public string listTick="";
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Request.HttpMethod == "GET")
+            {
+                if (Request.QueryString["list"] != null)
+                {
+                    string[] list = Request.QueryString["list"].ToString().Split(',');
+                    for(int i = 0;i < list.Length; i++)
+                    {
+                        for(int j = ((User)Session["User"]).giohang.Count - 1;j >= 0; j--)
+                        {
+                            if (((User)Session["User"]).giohang[j].id == int.Parse(list[i]))
+                            {
+                                ((User)Session["User"]).giohang.RemoveAt(j);
+                                break;
+                            }
+                        }
+                    }
+                    Response.Redirect("Success.aspx");
+                }
+            }
             if ((User)Session["User"] == null)
             {
                 Response.Redirect("Login.aspx");

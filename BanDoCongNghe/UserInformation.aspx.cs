@@ -33,6 +33,10 @@ namespace BanDoCongNghe
                 password.Text = hide;
 
             }
+            else
+            {
+                Response.Redirect("index.aspx");
+            }
             logOut.ServerClick += logOut_Click;
 
         }

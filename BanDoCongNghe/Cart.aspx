@@ -5,7 +5,7 @@
     <div class="body">
             <div class="trolai">
                 <a class="motrangchu" href="index.aspx">«</a>
-                <p > <b>Giỏ hàng của bạn</b></p>
+                <p style="margin-top:10px;"> <b>Giỏ hàng của bạn</b></p>
 
             </div>
         <asp:Repeater ID="rptGioHang" runat="server">
@@ -31,16 +31,17 @@
                     </div>
             </ItemTemplate>
         </asp:Repeater>
+        <input id="listTick" name="listTick" class="listTick" value="" style="display:none;"/>
             <div class="tong_tien">
                 <div class="tien">
                     <p class="tamtinh">Tạm tính</p>
                     <p id="thanh_tien" class="thanh_tien">0</p>
                 </div>
                 <asp:Button UseSubmitBehavior="false"  class="mua" runat="server" Text="Mua ngay"  OnClick="Buy_Click"/>
-                <button class="mua"><b>Mua ngay</b></button>
             </div>
         </div>
     <script>
+        var list = []
         function format(a) {
             var ans = "";
             a = parseInt(a);
@@ -64,11 +65,22 @@
                 var temp = parseInt(this.getAttribute("data-price")) * parseInt(this.getAttribute("data-soluong"));
                 if (this.checked) {
                     total += temp;
+                    list.push(parseInt(this.getAttribute("data-id")));
                 } else {
+                    var index = list.indexOf(parseInt(this.getAttribute("data-id")));
+                    if (index !== -1) {
+                        list.splice(index, 1);
+                    }
+                    
                     total -= temp;
                 }
                 document.getElementById("thanh_tien").innerText = format(total);
+                <% listTick = Request.Form["listTick"];%>
+                document.getElementsByClassName("listTick")[0].value = list;
             });
         }
+        document.getElementsByClassName("mua")[0].addEventListener("click", function (event) {
+            window.location.href = "Cart.aspx?list=" + document.getElementsByClassName("listTick")[0].value;
+        });
     </script>
 </asp:Content>
