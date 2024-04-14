@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <link rel="stylesheet" href="CSS/UPdate_INforrmatinon.css"/>
-        <div>
+        <form type="submit" method="POST">
         <div class="content is-flex"  >
             <h3 class="mkPass">Đổi mật khẩu</h3>   
           <table>
@@ -37,7 +37,7 @@
             </tr>
          <tr>
             <td>
-                <asp:Button ID="btn_confirm" UseSubmitBehavior="false" runat="server" class="button" Text="Cập nhật mật khẩu" OnClick="btn_confirm_Click" />
+                <button id="btn_confirm" class="button" type="submit">Đổi mật khẩu</button>
           
             </td>
          </tr>
@@ -46,7 +46,7 @@
             <a href="index.aspx" style="color:red;text-align:center;margin:10px auto;">Về trang chủ</a>
     </div>
      
-    </div>
+    </form>
     
 </asp:Content>
 

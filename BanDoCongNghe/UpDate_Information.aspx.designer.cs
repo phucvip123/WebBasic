@@ -13,14 +13,5 @@ namespace BanDoCongNghe
 
     public partial class UpDate_Information
     {
-
-        /// <summary>
-        /// btn_confirm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_confirm;
     }
 }

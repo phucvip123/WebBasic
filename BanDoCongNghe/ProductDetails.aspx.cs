@@ -30,6 +30,7 @@ namespace BanDoCongNghe
             }
             Button btn = (Button)sender;
             Product p = ProductService.gI().GetProduct(id);
+            if (p != null) p.soLuong = 1;
             if (UserService.gI().addItemToCart(((User)Session["User"]), p))
             {
                 Response.Redirect("Cart.aspx");

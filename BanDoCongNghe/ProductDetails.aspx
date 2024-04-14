@@ -72,7 +72,21 @@
         #lblGiaSanPham {
             color: #d70018;
         }
+        @media only screen and (max-width: 900px) {
+            .container {
+                height: auto;/* Thay đổi chiều cao thành tự động */
+            }
 
+            .top-frames {
+                flex-direction: column;/* Thay đổi hướng của flex container */
+            }
+        }
+
+        .frame1,
+        .frame2 {
+            width: 100%;/* Chỉnh kích thước phần tử thành 100% */
+            margin-right: 0;/* Xóa margin phải */
+        }
     </style>
     <%Models.Product.Product p = null;
     bool flag = false;
