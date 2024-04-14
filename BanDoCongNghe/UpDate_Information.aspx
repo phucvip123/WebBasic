@@ -37,7 +37,7 @@
             </tr>
          <tr>
             <td>
-                <asp:Button ID="btn_confirm" runat="server" class="button" Text="Cập nhật mật khẩu" OnClick="btn_confirm_Click" />
+                <asp:Button ID="btn_confirm" UseSubmitBehavior="false" runat="server" class="button" Text="Cập nhật mật khẩu" OnClick="btn_confirm_Click" />
           
             </td>
          </tr>

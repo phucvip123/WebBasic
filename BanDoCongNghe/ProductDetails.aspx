@@ -78,11 +78,11 @@
     bool flag = false;
     foreach(Models.Product.Product x in ((List<Models.Product.Product>)Application["Products"]))
     {
-        if(Request.QueryString["id"] != null && x.id == int.Parse(Request.QueryString["id"].ToString()))
+        if(Request.QueryString["id"] != null && x.id == int.Parse(Request.QueryString["id"].ToString()) || p==null)
         {
             flag = true;
                 p = x;
-                break;
+                id = p.id;
         }
     } %>
     <%if (Request.QueryString["id"] == null || !flag || p == null)
@@ -126,8 +126,8 @@
                     
                     
 
-                    <asp:Button CommandArgument="<%=p.id %>" ID="btnThemVaoGioHang" UseSubmitBehavior="false" runat="server" Text="Thêm vào giỏ hàng" CssClass="btnThemVaoGioHang" OnClick="btnThemVaoGioHang_Click"/>
-                    <asp:Button CommandArgument="<%=p.id %>" ID="btnMuaNgay" UseSubmitBehavior="false" runat="server" Text="Mua ngay" CssClass="btnMuaNgay" OnClick="btnThanhToan_Click" />
+                    <asp:Button CommandArgument='<%=p.id %>' ID="btnThemVaoGioHang" UseSubmitBehavior="false" runat="server" Text="Thêm vào giỏ hàng" CssClass="btnThemVaoGioHang" OnClick="btnThemVaoGioHang_Click"/>
+                    <asp:Button CommandArgument='<%=p.id %>' ID="btnMuaNgay" UseSubmitBehavior="false" runat="server" Text="Mua ngay" CssClass="btnMuaNgay" OnClick="btnThanhToan_Click" />
                 </div>
             </div>
             <a href="index.aspx" style="color:red;text-align:center;text-decoration:none;font-size:18px;margin-top:70px;">Về trang chủ</a>

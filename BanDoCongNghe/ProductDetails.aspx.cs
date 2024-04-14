@@ -13,9 +13,13 @@ namespace BanDoCongNghe
 {
     public partial class ProductDetails : System.Web.UI.Page
     {
+        public int id = -1;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Request.QueryString["id"] != null)
+            {
+                id = int.Parse(Request.QueryString["id"].ToString());
+            }
         }
         protected void btnThemVaoGioHang_Click(object sender, EventArgs e)
         {
@@ -25,7 +29,6 @@ namespace BanDoCongNghe
                 return;
             }
             Button btn = (Button)sender;
-            int id = int.Parse(btn.CommandArgument.ToString());
             Product p = ProductService.gI().GetProduct(id);
             if (UserService.gI().addItemToCart(((User)Session["User"]), p))
             {
@@ -35,11 +38,12 @@ namespace BanDoCongNghe
             {
 
             }
+            
         }
 
         protected void btnThanhToan_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("Success.aspx");
         }
     }
 }
